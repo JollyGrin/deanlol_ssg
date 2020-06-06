@@ -1,0 +1,12 @@
+$color-sand: #e7cc98;
+
+h1 {
+  color: red;
+}
+
+body {
+  background-color: $color-sand;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+}
