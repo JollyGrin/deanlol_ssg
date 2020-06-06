@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getData } from "../lib/gson";
 import Layout from "../components/Layout";
+import Hobby from "../components/Hobby";
 
 export default function Index({ gson, preview }) {
   //   console.log(gson);
@@ -10,79 +11,21 @@ export default function Index({ gson, preview }) {
       <section id="nav">{/* nav */}</section>
       <section id="grid">
         <div id="intro">
-          <h1>dean</h1>
+          <h1>
+            <strong>i'm dean</strong>
+          </h1>
+          <h2>goofing is good</h2>
         </div>
         <div id="hobbies">
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
-          <div className="hobby">
-            <span>title</span>
-          </div>
+          <Hobby />
+          <Hobby />
+          <Hobby />
+          <Hobby />
+          <Hobby />
         </div>
       </section>
       <style jsx>{`
-        #grid {
-          display: grid;
-          justify-content: center;
-          align-content: center;
-          height: 90vh;
-          padding: 2rem;
-        }
-
-        #intro {
-          padding: 3rem;
-          justify-self: center;
-          align-self: center;
-        }
-
-        #hobbies {
-          display: grid;
-
-          grid-gap: 1em;
-        }
-
-        .hobby {
-          background-color: grey;
-          border-radius: 1em;
-          padding: 1em;
-          height: 4rem;
-        }
-
-        @media (min-width: 600px) {
-          #grid {
-            grid-template-columns: 3fr 7fr;
-          }
-          #hobbies {
-            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-          }
-        }
-
-        @media (max-width: 600px) {
-          #grid {
-            color: white;
-            grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-          }
-
-          #hobbies {
-            grid-template-columns: 90vw;
-          }
-        }
+        //
       `}</style>
     </Layout>
   );

@@ -16,8 +16,12 @@ export default class Layout extends Component {
             type="text/css"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
           />
-          <link rel="stylesheet" type="text/css" href="css/styles.css" />
           <link rel="stylesheet" type="text/css" href="css/reset.css" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Indie+Flower&family=Josefin+Sans:wght@300;400;700&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="stylesheet" type="text/css" href="css/styles.css" />
           <link rel="shortcut icon" href="/static/favicon.ico" />
         </Head>
         {this.props.children}

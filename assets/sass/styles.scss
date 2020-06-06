@@ -1,7 +1,22 @@
+@charset "utf-8";
+
 $color-sand: #e7cc98;
+$font-header: "Abril Fatface", cursive;
+$font-silly: "Indie Flower", cursive;
+$font-normal: "Josefin Sans", sans-serif;
 
 h1 {
-  color: red;
+  color: #363636;
+  font-family: $font-header;
+  font-size: 3rem;
+  font-weight: 600;
+}
+h2 {
+  font-family: $font-silly;
+  font-size: 1.5rem;
+  color: #363636;
+  opacity: 0.6;
+  padding: 0.6rem;
 }
 
 body {
@@ -9,4 +24,55 @@ body {
   background-size: cover;
   min-height: 100vh;
   margin: 0;
+}
+
+#grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  font-family: $font-normal;
+}
+
+#intro {
+  padding: 3rem 0;
+  align-self: center;
+}
+
+#hobbies {
+  display: grid;
+
+  grid-gap: 1em;
+}
+
+.hobby {
+  background-color: grey;
+  border-radius: 1em;
+  padding: 1em;
+  height: 4rem;
+}
+
+@media (min-width: 600px) {
+  #grid {
+    grid-template-columns: 3fr 7fr;
+  }
+  #hobbies {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+  #intro {
+    justify-self: center;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #grid {
+    color: white;
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+  }
+
+  #hobbies {
+    grid-template-columns: 90vw;
+  }
 }
