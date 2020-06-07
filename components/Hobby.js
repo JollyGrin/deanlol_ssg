@@ -27,6 +27,11 @@ export default class Hobby extends Component {
         return "inherit";
       }
     },
+    textShad: () => {
+      if (this.props.data.textcolor) {
+        return "2px 2px 0.2em #363636";
+      }
+    },
     url: () => {
       if (this.props.data.url) {
         return this.props.data.url;
@@ -42,6 +47,7 @@ export default class Hobby extends Component {
         backgroundImage: `url("${this.process.backgroundIMG()}")`,
         color: this.process.textColor(),
         backgroundColor: this.process.backgroundColor(),
+        textShadow: this.process.textShad(),
       },
     };
     return (
@@ -54,6 +60,17 @@ export default class Hobby extends Component {
         </div>
 
         <style jsx>{`
+          .hobby {
+            box-shadow: 2px 2px 0.2em rgba(54, 54, 54, 0.15);
+            transition: box-shadow 0.35s ease-in-out;
+            -moz-transition: box-shadow 0.35s ease-in-out;
+            -webkit-transition: box-shadow 0.35s ease-in-out;
+          }
+
+          .hobby:hover {
+            box-shadow: 5px 5px 0.5em rgba(54, 54, 54, 0.3);
+          }
+
           h3 {
             font-size: 1.5em;
             font-family: "Abril Fatface";
