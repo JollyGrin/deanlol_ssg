@@ -30,7 +30,7 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 80vh;
+  min-height: 99vh;
   padding: 2rem;
   font-family: $font-normal;
 }
@@ -42,15 +42,7 @@ body {
 
 #hobbies {
   display: grid;
-
-  grid-gap: 1em;
-}
-
-.hobby {
-  background-color: grey;
-  border-radius: 1em;
-  padding: 1em;
-  height: 4rem;
+  grid-gap: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -68,7 +60,6 @@ body {
 
 @media (max-width: 600px) {
   #grid {
-    color: white;
     grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
   }
 
