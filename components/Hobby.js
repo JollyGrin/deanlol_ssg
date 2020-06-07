@@ -31,7 +31,7 @@ export default class Hobby extends Component {
       if (this.props.data.url) {
         return this.props.data.url;
       } else {
-        return "#";
+        return "/";
       }
     },
   };
