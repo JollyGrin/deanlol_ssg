@@ -29,7 +29,7 @@ export default class Hobby extends Component {
     },
     textShad: () => {
       if (this.props.data.textcolor) {
-        return "2px 2px 0.2em #363636";
+        return "2px 2px 2px rgba(54, 54, 54, 0.8)";
       }
     },
     url: () => {
