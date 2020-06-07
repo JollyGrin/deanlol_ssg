@@ -28,7 +28,7 @@ export default class Hobby extends Component {
   render() {
     const styles = {
       backgroundURL: {
-        "background-image": `url("${this.process.backgroundIMG()}")`,
+        backgroundImage: `url("${this.process.backgroundIMG()}")`,
         color: this.process.textColor(),
       },
     };
@@ -51,10 +51,15 @@ export default class Hobby extends Component {
           a {
             text-decoration: none;
             color: inherit;
+            opacity: 0.8
+            transition: text-shadow 0.25s ease-in-out;
+            -moz-transition: text-shadow 0.25s ease-in-out;
+            -webkit-transition: text-shadow 0.25s ease-in-out;
           }
 
           a:hover {
-            opacity: 0.5;
+            opacity: 1;
+            text-shadow: 5px 5px #e7cc98;
           }
 
           .hobby {
