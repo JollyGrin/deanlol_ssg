@@ -12,42 +12,12 @@ export default class Hobby extends Component {
 
   process = {
     backgroundColor: () => {
-      const x = Math.random() * Math.random();
-      const step = [0, 0.2, 0.4, 0.6, 0.8, 0.9];
-      const test = {
-        a: this.between(x, step[0], step[1]),
-        b: this.between(x, step[1], step[2]),
-        c: this.between(x, step[2], step[3]),
-        d: this.between(x, step[3], step[4]),
-        e: this.between(x, step[4], step[5]),
-      };
-
-      const res = {
-        a: "#F5E795",
-        b: "#FFD19C",
-        c: "#F5BA95",
-        d: "ECB755",
-        e: "B0E8CB",
-        f: "C382E8",
-      };
-      let color;
-
-      switch (true) {
-        case test.a:
-          return res.a;
-        case test.b:
-          return res.b;
-        case test.c:
-          return res.c;
-        case test.d:
-          return res.d;
-        case test.e:
-          return res.e;
-        default:
-          return res.f;
-      }
+      return "#F5E795";
     },
     backgroundIMG: () => {
+      if (!this.props.data.imageurl) {
+        return "#";
+      }
       return this.props.data.imageurl;
     },
     textColor: () => {
