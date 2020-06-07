@@ -34,7 +34,7 @@ footer {
   min-height: 5vh;
 
   & span {
-    padding: 1em;
+    padding: 0 1.5em;
 
     & i {
       font-size: 2em;
@@ -46,7 +46,7 @@ footer {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 90vh;
+  min-height: 86vh;
   padding: 2rem;
   font-family: $font-normal;
 }
@@ -64,6 +64,7 @@ footer {
 @media (min-width: 600px) {
   #grid {
     grid-template-columns: 3fr 7fr;
+    padding-right: 5rem;
   }
   #hobbies {
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
