@@ -45,4 +45,4 @@ The previous site (Next.js 9 static-export, built 2020) is archived in `_legacy-
 
 - Design explorations (all rounds): claude.ai/design → project **"dean.lol redesign"**
 - Winner source of truth: `docs/index.html` in this repo
-- Claude session memory: the dean.lol project memory carries this context forward — future sessions in `~/git/deanlol` or `~/git/dean.lol` will recall it.
+- Claude session memory: sessions started in `~/git/dean.lol` (the old repo's path) carry this context automatically; sessions in this repo should start from this HANDOFF.md.
